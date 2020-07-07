@@ -11,42 +11,18 @@
     <title>Mini Calendar</title>
   </head>
   <body>
+    <div class="colorPicker-container">
+      <span>
+        Change color:
+      </span>
+      <input type="color" id="colorPicker" value="#ea0100" />
+    </div>
     <div class="calendar">
       <div id="monthName"></div>
       <div id="dayName"></div>
       <div id="dayNumber"></div>
       <div id="year"></div>
     </div>
-    <script>
-      const lang = navigator.language;
-      const getActualDate = lang => {
-        const date = new Date();
-
-        const dayNumber = date.getDate();
-        const month = date.getMonth();
-        const dayName = date.toLocaleString(lang, { weekday: 'long' });
-        const monthName = date.toLocaleString(lang, { month: 'long' });
-        const year = date.getFullYear();
-
-        return {
-          dayNumber,
-          month,
-          dayName,
-          monthName,
-          year,
-        };
-      };
-      const innerText = (el, text) => {
-        document.querySelector(el).innerText = text;
-      };
-
-      const { dayNumber, month, dayName, monthName, year } = getActualDate(
-        lang
-      );
-      innerText('#monthName', monthName);
-      innerText('#dayName', dayName);
-      innerText('#dayNumber', dayNumber);
-      innerText('#year', year);
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

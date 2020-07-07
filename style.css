@@ -1,5 +1,7 @@
-* {
+:root {
   --calendar-color: #ea0100;
+}
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,4 +57,37 @@ body {
   font-size: 20px;
   font-weight: 500;
   color: #999;
+}
+
+/* COLOR PICKER */
+input[type='color'] {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  outline: none;
+}
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type='color']::-webkit-color-swatch {
+  border-radius: 50%;
+}
+.colorPicker-container {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.colorPicker-container span {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+#colorPicker {
+  width: 25px;
+  height: 25px;
+
+  cursor: pointer;
 }
